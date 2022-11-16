@@ -19,6 +19,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &__figure {
+    width: 56px;
+    height: 56px;
+    position: relative;
+  }
 }
 
 .black {
