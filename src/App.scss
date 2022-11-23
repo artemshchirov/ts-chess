@@ -34,3 +34,18 @@
 .white {
   background-color: #e8edf9;
 }
+
+.selected {
+  background: deepskyblue;
+}
+
+.available {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: skyblue;
+}
+
+.attack {
+  background: orangered;
+}

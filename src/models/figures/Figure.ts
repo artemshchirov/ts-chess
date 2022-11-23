@@ -29,7 +29,7 @@ export class Figure {
   }
 
   canMove(target: Cell): boolean {
-    return true;
+    return true
   }
 
   moveFigure(target: Cell) { }
