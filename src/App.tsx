@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 
 import BoardComponent from './components/BoardComponent';
+import LostFigures from './components/LostFigures';
+import Timer from './components/Timer';
+
 import { Board } from './models/Board';
 import { Player } from './models/Player';
 import { Colors } from './models/Colors';
 
 import './App.scss';
-import LostFigures from './components/LostFigures';
 
 const App = () => {
   const [board, setBoard] = useState(new Board());
@@ -34,6 +36,7 @@ const App = () => {
 
   return (
     <div className="app">
+      <Timer currentPlayer={currentPlayer} restart={restart} />
       <BoardComponent
         board={board}
         setBoard={setBoard}
