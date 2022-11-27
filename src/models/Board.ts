@@ -7,6 +7,7 @@ import { Bishop } from './figures/Bishop';
 import { Knight } from './figures/Knight';
 import { Rook } from './figures/Rook';
 
+
 export class Board {
   cells: Cell[][] = []
 
@@ -42,7 +43,7 @@ export class Board {
   }
 
   public getCell(x: number, y: number) {
-    return this.cells[y][x]
+    return this.cells[y][x];
   }
 
   private addPawns() {

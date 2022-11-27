@@ -27,6 +27,13 @@ export class Cell {
     return this.figure === null;
   }
 
+  isEnemy(target: Cell): boolean {
+    if (target.figure) {
+      return this.figure?.color !== target.figure.color;
+    }
+    return false;
+  }
+
   isEmptyVertical(target: Cell): boolean {
     if (this.x !== target.x) return false;
 
@@ -36,7 +43,7 @@ export class Cell {
     for (let y = min + 1; y < max; y++) {
       if (!this.board.getCell(this.x, y).isEmpty()) return false;
     }
-    return true
+    return true;
   }
 
   isEmptyHorizontal(target: Cell): boolean {
@@ -48,7 +55,7 @@ export class Cell {
     for (let x = min + 1; x < max; x++) {
       if (!this.board.getCell(x, this.y).isEmpty()) return false;
     }
-    return true
+    return true;
   }
 
   isEmptyDiagonal(target: Cell): boolean {
@@ -63,7 +70,7 @@ export class Cell {
       if (!this.board.getCell(this.x + dx * i, this.y + dy * i).isEmpty()) return false;
     }
 
-    return true
+    return true;
   }
 
   setFigure(figure: Figure) {
