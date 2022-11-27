@@ -49,3 +49,25 @@
 .attack {
   background: orangered;
 }
+
+.lost {
+  height: calc(50vh - 60px);
+  padding: 30px;
+  margin-left: 50px;
+  background: lightgray;
+
+  &__title {
+    padding-bottom: 5px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__figure {
+    width: 20px;
+    height: 20px;
+  }
+}
